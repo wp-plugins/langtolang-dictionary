@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: gunebakan
-Donate link: http://www.langtolang.com/
+Donate link: http://www.langtolang.com/external/wordpress/
 Tags: langtolang, dictionary, translate, sidebar, widget, plugin, english, arabic, chinese simplified, chinese traditional, czech, danish, dutch, estonian, finnish, french, german, greek, hungarian, icelandic, indonesian, italian, japanese, korean, latvian, lithuanian, norwegian, polish, portuguese brazil, portuguese portugal, romanian, russian, slovak, slovenian, spanish, swedish, turkish
 Requires at least: 2.0.2
 Tested up to: 2.7.1
-Stable tag: 1.0
+Stable tag: 1.0.0
 
 Langtolang Dictionary provides a multilingual dictionary service from the sidebar. 
  

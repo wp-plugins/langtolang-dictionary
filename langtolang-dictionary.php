@@ -29,9 +29,6 @@ function wp_widget_langtolang($args) {
 	if ( empty($selectTo) )
 		$selectTo = 'spanish';
 	$htmlSelectTo = '<select name="selectTo">'.prepare_html_language_options($selectTo).'</select>';
-	if ( empty($code) )
-		$code = '<script src="http://www.toomanyquotes.com/quote_of_the_day/category/5.js"> </script>
-			<br /><a href="http://www.toomanyquotes.com" title="Quotes and sayings">Quotes and sayings</a>';
 ?>
 		<?php echo $before_widget; ?>
 			<?php $title ? print($before_title . $title . $after_title) : null; ?>
@@ -82,15 +79,15 @@ function prepare_html_language_options($default_language) {
 						"swedish"=>"Swedish",
 						"turkish"=>"Turkish");
 	
-		$html="";
-		foreach ($LANGUAGES as $key => $value) {
-			if ($default_language==$key) {
-				$html .= '<option selected="selected" value="'.$key.'" label="'.$value.'">'.$value.'</option>';
-			} else {
-				$html .= '<option value="'.$key.'" label="'.$value.'">'.$value.'</option>';
-			}	
-		}
-		return $html;
+	$html="";
+	foreach ($LANGUAGES as $key => $value) {
+		if ($default_language==$key) {
+			$html .= '<option selected="selected" value="'.$key.'" label="'.$value.'">'.$value.'</option>';
+		} else {
+			$html .= '<option value="'.$key.'" label="'.$value.'">'.$value.'</option>';
+		}	
+	}
+	return $html;
 }
 
 function wp_widget_langtolang_control() {
@@ -98,18 +95,15 @@ function wp_widget_langtolang_control() {
 	$options = $newoptions = get_option('widget_langtolang');
 	if ( $_POST["langtolang-submit"] ) {
 		$newoptions['title'] = strip_tags(stripslashes($_POST["langtolang-title"]));
-		$newoptions['code'] = stripslashes($_POST["langtolang-code"]);
 		$newoptions['search_button_label'] = stripslashes($_POST["langtolang-search-button-label"]);
 		$newoptions['selectFrom'] = stripslashes($_POST["langtolang-selectFrom"]);
 		$newoptions['selectTo'] = stripslashes($_POST["langtolang-selectTo"]);
-		$newoptions['after_code'] = stripslashes($_POST["langtolang-after-code"]);
 	}
 	if ( $options != $newoptions ) {
 		$options = $newoptions;
 		update_option('widget_langtolang', $options);
 	}
 	$title = attribute_escape($options['title']);
-	$code = attribute_escape($options['code']);
 	$search_button_label = attribute_escape($options['search_button_label']);
 	$default_language_from = attribute_escape($options['selectFrom']);
 	if ( empty($default_language_from) )
