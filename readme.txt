@@ -37,4 +37,4 @@ French, German, Greek, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kore
 1. Langtolang Widget in Plugin Menu
 2. Adding Langtolang to sidebar
 3. Plugin settings
-3. Sample result
+4. Sample result
