@@ -37,6 +37,7 @@ function wp_widget_langtolang($args) {
 			<?php echo  $htmlSelectFrom?>
 			<?php echo  $htmlSelectTo?>
 			<br><input type="submit" name="Submit" value="<?php echo $search_button_label?>">
+			<br><a href="http://www.langtolang.com">Langtolang Dictionary</a>
 			</form>
 		<?php echo $after_widget; ?>
 <?php
